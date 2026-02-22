@@ -1,0 +1,47 @@
+{
+  "kind": "build_request",
+  "title": "Change theme to black and red",
+  "projectName": "ENZOxSENSI",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-5",
+      "text": "Update the color scheme throughout the application from the current dark gaming aesthetic to a black and red theme. Modify CSS custom properties in frontend/src/index.css to use black as the primary background color and red as the accent color. Update all color variables including background, foreground, card, popover, primary, secondary, muted, accent, and destructive colors to align with the black and red palette.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "change the theme to black and red"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All backgrounds use black or near-black colors",
+        "Primary accent colors use red tones",
+        "Text maintains sufficient contrast against black backgrounds",
+        "The black and red theme is consistently applied across all screens (passkey, device name, popup)",
+        "Interactive elements (buttons, inputs, borders) use the red accent color appropriately"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts",
+    "Do not modify frontend/src/hooks/useInternetIdentity.tsx",
+    "Do not modify frontend/src/hooks/useActor.ts",
+    "Do not modify frontend/src/main.tsx",
+    "Do not modify frontend/src/components/ui components",
+    "Maintain existing functionality and screen flow",
+    "Keep the skull logo and gaming aesthetic intact"
+  ],
+  "nonGoals": [
+    "Changing component structure or layout",
+    "Modifying authentication logic",
+    "Altering the passkey validation or sensitivity calculation",
+    "Adding new features or screens"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

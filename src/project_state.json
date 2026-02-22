@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "ENZOxSENSI: A mobile app with passkey authentication ('enzonvrfall') that generates device-specific sensitivity settings after device name input",
+  "architectural_notes": [
+    "No server-side authentication - passkey validation is client-side only",
+    "Instant screen transitions with no loading states between passkey and device input",
+    "Static sensitivity values: general 176, red dot 98, 2x/4x 190"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-passkey-entry-screen-that-accepts-the-passkey-enzonvrfall-with-instant-validation-no-loading-state-or-verification-delay-display-the-note-follow-enzo-nvr-fall-for-passkey-below-the-passkey-input-field",
+      "title": "Create a passkey entry screen that accepts the passkey 'enzonvrfall' with instant validation (no loading state or verification delay). Display the note 'follow enzo.nvr.fall for passkey' below the passkey input field.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-device-name-input-interface-that-appears-after-successful-passkey-entry-include-an-input-field-for-the-device-name-and-a-generate-button",
+      "title": "Create a device name input interface that appears after successful passkey entry. Include an input field for the device name and a 'Generate' button.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-a-popup-message-when-the-generate-button-is-clicked-showing-the-sensi-for-your-device-is-general-176-red-dot-98-2x-190-4x-190-the-popup-should-appear-immediately-without-any-loading-state",
+      "title": "Display a popup message when the Generate button is clicked showing: 'the sensi for your device is general :- 176, red dot :- 98 ,2x :- 190 ,4x :- 190'. The popup should appear immediately without any loading state.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-the-app-with-a-distinctive-visual-theme-featuring-dark-tones-and-gaming-aesthetics-appropriate-for-a-sensitivity-settings-tool-use-modern-typography-and-create-a-cohesive-interface-that-feels-professional-yet-edgy",
+      "title": "Design the app with a distinctive visual theme featuring dark tones and gaming aesthetics appropriate for a sensitivity settings tool. Use modern typography and create a cohesive interface that feels professional yet edgy.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-color-scheme-throughout-the-application-from-the-current-dark-gaming-aesthetic-to-a-black-and-red-theme-modify-css-custom-properties-in-frontend-src-index-css-to-use-black-as-the-primary-background-color-and-red-as-the-accent-color-update-all-color-variables-including-background-foreground-card-popover-primary-secondary-muted-accent-and-destructive-colors-to-align-with-the-black-and-red-palette",
+      "title": "Update the color scheme throughout the application from the current dark gaming aesthetic to a black and red theme. Modify CSS custom properties in frontend/src/index.css to use black as the primary background color and red as the accent color. Update all color variables including background, foreground, card, popover, primary, secondary, muted, accent, and destructive colors to align with the black and red palette.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Passkey entry screen with 'enzonvrfall' key and Instagram follow note",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Device name input interface with instant transition (no loading)",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Generate button that displays sensitivity settings popup",
+      "reqIds": [
+        "AR-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Skull logo for app branding",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Change app theme to black and red color scheme",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "ENZOxSENSI",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
