@@ -30,8 +30,8 @@ function App() {
             alt="ENZOxSENSI Logo" 
             className="w-10 h-10 sm:w-12 sm:h-12"
           />
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
-            ENZO<span className="text-accent">x</span>SENSI
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+            ENZO<span className="text-white">x</span>SENSI
           </h1>
         </div>
       </header>

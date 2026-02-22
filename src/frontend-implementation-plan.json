@@ -1,21 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Change background color to pure black",
+  "title": "Change ENZOxSENSI text color to white",
   "requirements": [
     {
-      "id": "REQ-10",
-      "summary": "Update CSS custom properties to set background color to pure black",
+      "id": "REQ-11",
+      "summary": "Update the ENZOxSENSI title text color to white in the App.tsx header component",
       "acceptanceCriteria": [
-        "The --background CSS variable is set to 0% 0% 0% in OKLCH format",
-        "Both light and dark theme sections reflect the pure black background",
-        "The application displays a pure black background across all screens"
+        "The ENZOxSENSI text in the header displays in white color",
+        "The text color change is visible against the black background",
+        "No other text colors in the application are affected"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/index.css",
+          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Modify the --background CSS custom property in both the :root (light theme) and .dark (dark theme) sections to use 0% 0% 0% in OKLCH format, representing pure black (#000000). Preserve all other CSS variables and the existing OKLCH color format structure."
+          "description": "Modify the header component to change the ENZOxSENSI branding text color from its current styling to white using the text-white Tailwind CSS class or equivalent white color styling. Locate the ENZOxSENSI text element in the header and update its className or style to apply white color."
         }
       ]
     }

@@ -1,10 +1,9 @@
 # Specification
 
 ## Summary
-**Goal:** Change the application background color to pure black.
+**Goal:** Change the ENZOxSENSI text color to white in the header.
 
 **Planned changes:**
-- Update the `--background` CSS variable in `frontend/src/index.css` to pure black (#000000) using OKLCH format (0% 0% 0%)
-- Apply this change to both light and dark theme sections
+- Update the ENZOxSENSI title text styling in the header component to display in white color
 
-**User-visible outcome:** The application displays with a pure black background across all screens.
+**User-visible outcome:** The ENZOxSENSI branding text in the header will appear in white color against the black background.
