@@ -2,7 +2,7 @@ import { useState, FormEvent } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
-import { Smartphone } from 'lucide-react';
+import { Smartphone, Target } from 'lucide-react';
 
 interface DeviceNameScreenProps {
   onGenerate: (deviceName: string) => void;
@@ -28,8 +28,15 @@ export default function DeviceNameScreen({ onGenerate }: DeviceNameScreenProps) 
           </div>
           <h2 className="text-2xl font-bold text-foreground mb-2">Device Setup</h2>
           <p className="text-muted-foreground text-center">
-            Enter your device name to generate sensitivity settings
+            Enter your device name to generate Brazilian sensitivity settings
           </p>
+          
+          <div className="mt-4 flex items-center gap-2 px-4 py-2 rounded-md bg-accent/10 border border-accent/30">
+            <Target className="w-5 h-5 text-accent" />
+            <span className="text-accent font-bold text-sm">
+              100% headshot rate
+            </span>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -47,7 +54,7 @@ export default function DeviceNameScreen({ onGenerate }: DeviceNameScreenProps) 
               autoFocus
             />
             <p className="text-xs text-muted-foreground">
-              This helps us optimize your sensitivity settings
+              This helps us optimize your Brazilian sensitivity settings
             </p>
           </div>
 

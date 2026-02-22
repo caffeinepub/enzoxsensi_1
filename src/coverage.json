@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T14:26:58.190Z",
+  "generatedAt": "2026-02-22T15:19:53.484Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,15 +11,14 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-6",
-        "summary": "Replace the static sensitivity values (General: 176, Red Dot: 98, 2x: 190, 4x: 190) with randomly generated values. Generate a new random set of sensitivity values each time the Generate button is clicked. The random values should be within sensible gaming sensitivity ranges: General (50-200), Red Dot (50-150), 2x (100-250), 4x (100-250).",
+        "id": "REQ-10",
+        "summary": "Update the CSS custom properties in frontend/src/index.css to set the background color to pure black (#000000). Modify the --background variable in both light and dark theme sections to use 0% 0% 0% (OKLCH format for pure black).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/SensitivityPopup.tsx",
-          "frontend/src/components/DeviceNameScreen.tsx"
+          "frontend/src/index.css"
         ],
         "matchedFiles": [
-          "frontend/src/components/SensitivityPopup.tsx"
+          "frontend/src/index.css"
         ]
       }
     ]
@@ -29,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/SensitivityPopup.tsx",
+    "frontend/src/index.css",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

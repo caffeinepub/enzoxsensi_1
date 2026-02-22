@@ -1,11 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
-  "summary": "ENZOxSENSI: A mobile app with passkey authentication ('enzonvrfall') that generates random, device-specific sensitivity settings after device name input",
+  "projectStateVersion": 13,
+  "summary": "ENZOxSENSI: A mobile app with passkey authentication ('enzonvrfall') that generates random, device-specific Brazilian sensitivity settings after device name input, promoting 100% headshot rate",
   "architectural_notes": [
     "No server-side authentication - passkey validation is client-side only",
     "Instant screen transitions with no loading states between passkey and device input",
-    "Random sensitivity generation per device (ranges TBD)"
+    "Random sensitivity generation per device (ranges TBD)",
+    "All sensitivity values capped at maximum of 200"
   ],
   "known_issues": [],
   "isFixRequest": false,
@@ -57,6 +58,38 @@
         "REQ-6"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-random-sensitivity-value-generation-in-sensitivitypopup-tsx-to-cap-all-sensitivity-types-at-a-maximum-of-200-change-the-current-ranges-from-general-50-200-red-dot-50-150-2x-100-250-4x-100-250-to-general-50-200-red-dot-50-200-2x-50-200-4x-50-200",
+      "title": "Update the random sensitivity value generation in SensitivityPopup.tsx to cap all sensitivity types at a maximum of 200. Change the current ranges from General (50-200), Red Dot (50-150), 2x (100-250), 4x (100-250) to General (50-200), Red Dot (50-200), 2x (50-200), 4x (50-200).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-occurrences-of-sensitivity-with-brazilian-sensitivity-throughout-the-application-including-the-sensitivitypopup-component-title-and-all-sensitivity-value-labels-general-red-dot-2x-4x",
+      "title": "Replace all occurrences of 'sensitivity' with 'Brazilian sensitivity' throughout the application, including the SensitivityPopup component title and all sensitivity value labels (General, Red Dot, 2x, 4x).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-note-displaying-100-headshot-rate-to-the-device-name-input-interface-devicenamescreen-component-position-this-note-prominently-on-the-screen-where-users-enter-their-device-name",
+      "title": "Add a note displaying '100% headshot rate' to the device name input interface (DeviceNameScreen component). Position this note prominently on the screen where users enter their device name.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-css-custom-properties-in-frontend-src-index-css-to-set-the-background-color-to-pure-black-000000-modify-the-background-variable-in-both-light-and-dark-theme-sections-to-use-0-0-0-oklch-format-for-pure-black",
+      "title": "Update the CSS custom properties in frontend/src/index.css to set the background color to pure black (#000000). Modify the --background variable in both light and dark theme sections to use 0% 0% 0% (OKLCH format for pure black).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -100,6 +133,34 @@
       "reqIds": [
         "AR-3"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Change maximum sensitivity range to 200 for all sensitivity types",
+      "reqIds": [
+        "AR-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Replace 'sensitivity' with 'Brazilian sensitivity' throughout the app",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add note '100% headshot rate' to the device input interface",
+      "reqIds": [
+        "AR-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Change background color to pure black",
+      "reqIds": [],
       "status": "pending"
     }
   ],

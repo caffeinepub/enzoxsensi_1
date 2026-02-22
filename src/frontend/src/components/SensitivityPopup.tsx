@@ -28,9 +28,9 @@ export default function SensitivityPopup({
 
     return [
       { label: 'General', value: generateRandom(50, 200) },
-      { label: 'Red Dot', value: generateRandom(50, 150) },
-      { label: '2x', value: generateRandom(100, 250) },
-      { label: '4x', value: generateRandom(100, 250) },
+      { label: 'Red Dot', value: generateRandom(50, 200) },
+      { label: '2x', value: generateRandom(50, 200) },
+      { label: '4x', value: generateRandom(50, 200) },
     ];
   }, [isOpen]); // Regenerate when popup opens
 
@@ -44,7 +44,7 @@ export default function SensitivityPopup({
             </div>
           </div>
           <DialogTitle className="text-center text-2xl">
-            Sensitivity Settings Generated
+            Brazilian Sensitivity Settings Generated
           </DialogTitle>
           <DialogDescription className="text-center text-muted-foreground">
             {deviceName && `For your device: ${deviceName}`}
@@ -53,7 +53,7 @@ export default function SensitivityPopup({
 
         <div className="space-y-4 py-4">
           <p className="text-sm text-foreground/90 text-center mb-4">
-            The sensi for your device is:
+            The Brazilian sensitivity for your device is:
           </p>
           
           <div className="space-y-3">

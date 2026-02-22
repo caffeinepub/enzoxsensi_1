@@ -1,27 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Generate random sensitivity values for each device",
+  "title": "Change background color to pure black",
   "requirements": [
     {
-      "id": "REQ-6",
-      "summary": "Replace static sensitivity values with randomly generated values within sensible gaming ranges, generating new values each time the Generate button is clicked",
+      "id": "REQ-10",
+      "summary": "Update CSS custom properties to set background color to pure black",
       "acceptanceCriteria": [
-        "Each device name generates a unique set of random sensitivity values",
-        "Values are generated within the specified ranges for each sensitivity type",
-        "The popup displays the randomly generated values instead of static ones",
-        "Clicking Generate multiple times produces different random values each time"
+        "The --background CSS variable is set to 0% 0% 0% in OKLCH format",
+        "Both light and dark theme sections reflect the pure black background",
+        "The application displays a pure black background across all screens"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/SensitivityPopup.tsx",
+          "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Replace the static sensitivity values (General: 176, Red Dot: 98, 2x: 190, 4x: 190) with a random generation function that produces values within the specified ranges: General (50-200), Red Dot (50-150), 2x (100-250), 4x (100-250). Implement the random generation logic to execute each time the popup is opened, ensuring different values are generated on each Generate button click."
-        },
-        {
-          "path": "frontend/src/components/DeviceNameScreen.tsx",
-          "operation": "modify",
-          "description": "Ensure the Generate button triggers sensitivity popup with fresh random values each time it is clicked, passing the device name to the popup component without caching or storing previous values."
+          "description": "Modify the --background CSS custom property in both the :root (light theme) and .dark (dark theme) sections to use 0% 0% 0% in OKLCH format, representing pure black (#000000). Preserve all other CSS variables and the existing OKLCH color format structure."
         }
       ]
     }
