@@ -2,7 +2,7 @@
   "frontend/src/App.tsx": "Main application component managing authentication state and screen transitions between passkey entry, device name input, and sensitivity popup display with header and footer layout.",
   "frontend/src/components/PasskeyScreen.tsx": "Passkey entry screen component with instant client-side validation for 'enzonvrfall' passkey and Instagram follow note display.",
   "frontend/src/components/DeviceNameScreen.tsx": "Device name input screen with form validation and Generate button that triggers sensitivity settings popup.",
-  "frontend/src/components/SensitivityPopup.tsx": "Modal dialog component displaying static sensitivity values (general: 176, red dot: 98, 2x: 190, 4x: 190) using shadcn Dialog component.",
+  "frontend/src/components/SensitivityPopup.tsx": "Modal dialog component that generates and displays random sensitivity values (General: 50-200, Red Dot: 50-150, 2x: 100-250, 4x: 100-250) each time the popup opens, using useMemo with isOpen dependency to ensure fresh values on every Generate button click.",
   "frontend/src/index.css": "Global styles with black and red theme using OKLCH color system, featuring red accent color (hue 30) for a bold gaming aesthetic with deep black backgrounds and high contrast.",
   "frontend/tailwind.config.js": "Tailwind configuration extended with enhanced shadow utilities for depth and gaming aesthetic.",
   "frontend/src/hooks/useQueries.ts": "Empty placeholder file as the app uses only client-side logic with no backend queries required."

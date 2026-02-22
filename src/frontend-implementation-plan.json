@@ -1,28 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Change theme to black and red",
+  "title": "Generate random sensitivity values for each device",
   "requirements": [
     {
-      "id": "REQ-5",
-      "summary": "Update the color scheme throughout the application from the current dark gaming aesthetic to a black and red theme",
+      "id": "REQ-6",
+      "summary": "Replace static sensitivity values with randomly generated values within sensible gaming ranges, generating new values each time the Generate button is clicked",
       "acceptanceCriteria": [
-        "All backgrounds use black or near-black colors",
-        "Primary accent colors use red tones",
-        "Text maintains sufficient contrast against black backgrounds",
-        "The black and red theme is consistently applied across all screens (passkey, device name, popup)",
-        "Interactive elements (buttons, inputs, borders) use the red accent color appropriately"
+        "Each device name generates a unique set of random sensitivity values",
+        "Values are generated within the specified ranges for each sensitivity type",
+        "The popup displays the randomly generated values instead of static ones",
+        "Clicking Generate multiple times produces different random values each time"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/index.css",
+          "path": "frontend/src/components/SensitivityPopup.tsx",
           "operation": "modify",
-          "description": "Update CSS custom properties to implement black and red theme. Change background colors to black or near-black (OKLCH values with L ~0-0.1), set primary/accent colors to red tones (OKLCH with H ~30 for red hue), update foreground text colors to ensure sufficient contrast against black backgrounds, modify card/popover/muted colors to use dark grays with red undertones, and adjust border colors to use red accents. Maintain OKLCH color space format for consistency."
+          "description": "Replace the static sensitivity values (General: 176, Red Dot: 98, 2x: 190, 4x: 190) with a random generation function that produces values within the specified ranges: General (50-200), Red Dot (50-150), 2x (100-250), 4x (100-250). Implement the random generation logic to execute each time the popup is opened, ensuring different values are generated on each Generate button click."
         },
         {
-          "path": "frontend/tailwind.config.js",
+          "path": "frontend/src/components/DeviceNameScreen.tsx",
           "operation": "modify",
-          "description": "Verify that Tailwind configuration correctly maps the updated CSS custom properties from index.css to utility classes. Ensure the color mappings in the theme.extend.colors section reference the modified CSS variables and that the black and red theme propagates through all Tailwind utilities used in components."
+          "description": "Ensure the Generate button triggers sensitivity popup with fresh random values each time it is clicked, passing the device name to the popup component without caching or storing previous values."
         }
       ]
     }

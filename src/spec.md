@@ -1,12 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Update the application's color scheme to a black and red theme.
+**Goal:** Generate random sensitivity values for each device instead of using static values.
 
 **Planned changes:**
-- Modify CSS custom properties in frontend/src/index.css to use black as primary background color
-- Update accent colors throughout the application to use red tones
-- Ensure text contrast is maintained against black backgrounds
-- Apply the black and red theme consistently across all screens (passkey, device name, popup)
+- Replace static sensitivity values (General: 176, Red Dot: 98, 2x: 190, 4x: 190) with randomly generated values
+- Generate random values within sensible gaming ranges: General (50-200), Red Dot (50-150), 2x (100-250), 4x (100-250)
+- Each click of the Generate button produces a new set of random sensitivity values
+- Each device name generates its own unique set of random values
 
-**User-visible outcome:** The application will display with a black and red color scheme instead of the current dark gaming aesthetic, while maintaining the skull logo and overall gaming feel.
+**User-visible outcome:** Users can generate random sensitivity configurations for their devices, with different values appearing each time they click the Generate button.

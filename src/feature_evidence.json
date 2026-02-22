@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-color-scheme-throughout-the-application-from-the-current-dark-gaming-aesthetic-to-a-black-and-red-theme-modify-css-custom-properties-in-frontend-src-index-css-to-use-black-as-the-primary-background-color-and-red-as-the-accent-color-update-all-color-variables-including-background-foreground-card-popover-primary-secondary-muted-accent-and-destructive-colors-to-align-with-the-black-and-red-palette",
-      "featureTitle": "Update the color scheme throughout the application from the current dark gaming aesthetic to a black and red theme. Modify CSS custom properties in frontend/src/index.css to use black as the primary background color and red as the accent color. Update all color variables including background, foreground, card, popover, primary, secondary, muted, accent, and destructive colors to align with the black and red palette.",
+      "featureId": "feature-replace-the-static-sensitivity-values-general-176-red-dot-98-2x-190-4x-190-with-randomly-generated-values-generate-a-new-random-set-of-sensitivity-values-each-time-the-generate-button-is-clicked-the-random-values-should-be-within-sensible-gaming-sensitivity-ranges-general-50-200-red-dot-50-150-2x-100-250-4x-100-250",
+      "featureTitle": "Replace the static sensitivity values (General: 176, Red Dot: 98, 2x: 190, 4x: 190) with randomly generated values. Generate a new random set of sensitivity values each time the Generate button is clicked. The random values should be within sensible gaming sensitivity ranges: General (50-200), Red Dot (50-150), 2x (100-250), 4x (100-250).",
       "files": [
-        "frontend/src/index.css"
+        "frontend/src/components/SensitivityPopup.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,7 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-5"
+        "REQ-6"
       ],
       "confidence": "high"
     }

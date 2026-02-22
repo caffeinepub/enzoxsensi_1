@@ -7,6 +7,7 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2 } from 'lucide-react';
+import { useMemo } from 'react';
 
 interface SensitivityPopupProps {
   isOpen: boolean;
@@ -19,12 +20,19 @@ export default function SensitivityPopup({
   onClose,
   deviceName,
 }: SensitivityPopupProps) {
-  const sensitivitySettings = [
-    { label: 'General', value: 176 },
-    { label: 'Red Dot', value: 98 },
-    { label: '2x', value: 190 },
-    { label: '4x', value: 190 },
-  ];
+  // Generate random sensitivity values within specified ranges
+  const sensitivitySettings = useMemo(() => {
+    const generateRandom = (min: number, max: number) => {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    return [
+      { label: 'General', value: generateRandom(50, 200) },
+      { label: 'Red Dot', value: generateRandom(50, 150) },
+      { label: '2x', value: generateRandom(100, 250) },
+      { label: '4x', value: generateRandom(100, 250) },
+    ];
+  }, [isOpen]); // Regenerate when popup opens
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

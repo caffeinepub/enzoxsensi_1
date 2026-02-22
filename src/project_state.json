@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
-  "summary": "ENZOxSENSI: A mobile app with passkey authentication ('enzonvrfall') that generates device-specific sensitivity settings after device name input",
+  "projectStateVersion": 7,
+  "summary": "ENZOxSENSI: A mobile app with passkey authentication ('enzonvrfall') that generates random, device-specific sensitivity settings after device name input",
   "architectural_notes": [
     "No server-side authentication - passkey validation is client-side only",
     "Instant screen transitions with no loading states between passkey and device input",
-    "Static sensitivity values: general 176, red dot 98, 2x/4x 190"
+    "Random sensitivity generation per device (ranges TBD)"
   ],
   "known_issues": [],
   "isFixRequest": false,
@@ -49,6 +49,14 @@
         "REQ-5"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-static-sensitivity-values-general-176-red-dot-98-2x-190-4x-190-with-randomly-generated-values-generate-a-new-random-set-of-sensitivity-values-each-time-the-generate-button-is-clicked-the-random-values-should-be-within-sensible-gaming-sensitivity-ranges-general-50-200-red-dot-50-150-2x-100-250-4x-100-250",
+      "title": "Replace the static sensitivity values (General: 176, Red Dot: 98, 2x: 190, 4x: 190) with randomly generated values. Generate a new random set of sensitivity values each time the Generate button is clicked. The random values should be within sensible gaming sensitivity ranges: General (50-200), Red Dot (50-150), 2x (100-250), 4x (100-250).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -84,6 +92,14 @@
       "id": "AR-5",
       "summary": "Change app theme to black and red color scheme",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Generate random sensitivity values for each device instead of static values",
+      "reqIds": [
+        "AR-3"
+      ],
       "status": "pending"
     }
   ],

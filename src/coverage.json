@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T13:39:21.874Z",
+  "generatedAt": "2026-02-22T14:26:58.190Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,26 +11,25 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-5",
-        "summary": "Update the color scheme throughout the application from the current dark gaming aesthetic to a black and red theme. Modify CSS custom properties in frontend/src/index.css to use black as the primary background color and red as the accent color. Update all color variables including background, foreground, card, popover, primary, secondary, muted, accent, and destructive colors to align with the black and red palette.",
+        "id": "REQ-6",
+        "summary": "Replace the static sensitivity values (General: 176, Red Dot: 98, 2x: 190, 4x: 190) with randomly generated values. Generate a new random set of sensitivity values each time the Generate button is clicked. The random values should be within sensible gaming sensitivity ranges: General (50-200), Red Dot (50-150), 2x (100-250), 4x (100-250).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js"
+          "frontend/src/components/SensitivityPopup.tsx",
+          "frontend/src/components/DeviceNameScreen.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/index.css"
+          "frontend/src/components/SensitivityPopup.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/index.css",
+    "frontend/src/components/SensitivityPopup.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",
