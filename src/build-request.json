@@ -1,33 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Change ENZOxSENSI text color to white",
-  "projectName": "ENZOxSENSI",
+  "title": "Add 5-second loading state with optimization messages after device name entry",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-11",
-      "text": "Update the ENZOxSENSI title text color to white in the App.tsx header component. Modify the text styling to use white color (text-white or equivalent CSS class) for the ENZOxSENSI branding text displayed in the header.",
+      "id": "REQ-13",
+      "text": "Add a 5-second loading state that displays after the user enters a device name and clicks the Generate button in DeviceNameScreen.tsx. Show two sequential messages during this loading period: 'optimising your device' and 'generating sensitivity for your device'. After the 5-second delay completes, display the sensitivity popup with the generated values.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-last"
+          "msg-latest"
         ],
         "quotes": [
-          "ENZOxSENSI SHOULD BE IN WHITE COLOR"
+          "when the device name is entered there should be a 5 seconds generation thelling that \"optimising your device\" and \"generating sensitivity for your device\""
         ]
       },
       "acceptanceCriteria": [
-        "The ENZOxSENSI text in the header displays in white color",
-        "The text color change is visible against the black background",
-        "No other text colors in the application are affected"
+        "Clicking the Generate button triggers a 5-second loading state before showing the sensitivity popup",
+        "The loading state displays the message 'optimising your device'",
+        "The loading state displays the message 'generating sensitivity for your device'",
+        "After 5 seconds, the loading state disappears and the sensitivity popup appears with randomly generated Brazilian sensitivity values",
+        "The Generate button is disabled or shows a loading indicator during the 5-second delay"
       ]
     }
   ],
-  "constraints": [],
+  "constraints": [
+    "Do not modify the existing random sensitivity value generation logic (ranges 50-200 for all types)",
+    "Maintain the existing white input box styling",
+    "Keep the instant passkey validation with no loading state",
+    "Preserve the black and red color theme"
+  ],
   "nonGoals": [
-    "Changing colors of other text elements in the application",
-    "Modifying the background color",
-    "Changing the red accent color scheme"
+    "Changes to the passkey authentication flow",
+    "Modifications to the sensitivity value ranges",
+    "Backend integration for the loading state"
   ],
   "imageRequirements": {
     "required": [],

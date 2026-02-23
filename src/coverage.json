@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T16:41:36.447Z",
+  "generatedAt": "2026-02-23T05:34:38.656Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,14 +11,14 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-11",
-        "summary": "Update the ENZOxSENSI title text color to white in the App.tsx header component. Modify the text styling to use white color (text-white or equivalent CSS class) for the ENZOxSENSI branding text displayed in the header.",
+        "id": "REQ-13",
+        "summary": "Add a 5-second loading state that displays after the user enters a device name and clicks the Generate button in DeviceNameScreen.tsx. Show two sequential messages during this loading period: 'optimising your device' and 'generating sensitivity for your device'. After the 5-second delay completes, display the sensitivity popup with the generated values.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/App.tsx"
+          "frontend/src/components/DeviceNameScreen.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/App.tsx"
+          "frontend/src/components/DeviceNameScreen.tsx"
         ]
       }
     ]
@@ -28,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/App.tsx",
+    "frontend/src/components/DeviceNameScreen.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

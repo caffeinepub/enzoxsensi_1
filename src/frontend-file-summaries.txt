@@ -1,7 +1,7 @@
 {
   "frontend/src/App.tsx": "Main application component managing authentication state and screen transitions between passkey entry, device name input, and sensitivity popup display with header (featuring white ENZOxSENSI branding) and footer layout.",
-  "frontend/src/components/PasskeyScreen.tsx": "Passkey entry screen component with instant client-side validation for 'enzonvrfall' passkey and Instagram follow note display.",
-  "frontend/src/components/DeviceNameScreen.tsx": "Device name input screen with form validation, \"100% headshot rate\" badge display, and Generate button that triggers Brazilian sensitivity settings popup.",
+  "frontend/src/components/PasskeyScreen.tsx": "Passkey entry screen component with instant client-side validation for 'enzonvrfall' passkey, Instagram follow note display, and white input field with black text for high contrast.",
+  "frontend/src/components/DeviceNameScreen.tsx": "Device name input screen with form validation, \"100% headshot rate\" badge display, white input field with black text, and Generate button that triggers a 5-second loading state with sequential optimization messages (\"optimising your device\" and \"generating sensitivity for your device\") before showing the Brazilian sensitivity settings popup.",
   "frontend/src/components/SensitivityPopup.tsx": "Modal dialog component that generates and displays random Brazilian sensitivity values (General, Red Dot, 2x, 4x ranging from 50-200) each time the popup opens, using useMemo with isOpen dependency to ensure fresh values on every Generate button click.",
   "frontend/src/index.css": "Global styles with pure black background (OKLCH 0 0 0) and red accent theme using OKLCH color system for both light and dark modes, featuring high contrast gaming aesthetic.",
   "frontend/tailwind.config.js": "Tailwind configuration extended with enhanced shadow utilities for depth and gaming aesthetic.",

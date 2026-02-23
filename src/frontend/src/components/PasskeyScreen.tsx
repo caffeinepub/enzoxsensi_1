@@ -50,7 +50,7 @@ export default function PasskeyScreen({ onSuccess }: PasskeyScreenProps) {
                 setError(false);
               }}
               placeholder="Enter your passkey"
-              className={`bg-background border-border text-foreground ${
+              className={`bg-white border-border text-black ${
                 error ? 'border-destructive focus-visible:ring-destructive' : ''
               }`}
               autoFocus

@@ -1,9 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Change the ENZOxSENSI text color to white in the header.
+**Goal:** Add a 5-second loading state with optimization messages after device name entry before showing the sensitivity popup.
 
 **Planned changes:**
-- Update the ENZOxSENSI title text styling in the header component to display in white color
+- Display a loading state when the Generate button is clicked in DeviceNameScreen.tsx
+- Show sequential messages during loading: "optimising your device" and "generating sensitivity for your device"
+- Implement a 5-second delay before displaying the sensitivity popup with generated values
+- Disable or show loading indicator on the Generate button during the delay
 
-**User-visible outcome:** The ENZOxSENSI branding text in the header will appear in white color against the black background.
+**User-visible outcome:** After entering a device name and clicking Generate, users will see a 5-second loading animation with optimization messages before the sensitivity popup appears with their generated values.

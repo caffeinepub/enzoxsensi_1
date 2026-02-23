@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 15,
+  "projectStateVersion": 19,
   "summary": "ENZOxSENSI: A mobile app with passkey authentication ('enzonvrfall') that generates random, device-specific Brazilian sensitivity settings after device name input, promoting 100% headshot rate",
   "architectural_notes": [
     "No server-side authentication - passkey validation is client-side only",
-    "Instant screen transitions with no loading states between passkey and device input",
     "Random sensitivity generation per device (ranges TBD)",
-    "All sensitivity values capped at maximum of 200"
+    "All sensitivity values capped at maximum of 200",
+    "5-second loading state with optimization messages between device input and sensitivity display"
   ],
   "known_issues": [],
   "isFixRequest": false,
@@ -98,6 +98,22 @@
         "REQ-11"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-input-box-styling-in-both-passkeyscreen-tsx-and-devicenamescreen-tsx-to-use-white-background-color-modify-the-input-component-classname-to-include-bg-white-or-equivalent-tailwind-class-to-set-the-background-color-to-white-for-both-the-passkey-entry-field-and-the-device-name-entry-field",
+      "title": "Update the input box styling in both PasskeyScreen.tsx and DeviceNameScreen.tsx to use white background color. Modify the Input component className to include bg-white or equivalent Tailwind class to set the background color to white for both the passkey entry field and the device name entry field.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-5-second-loading-state-that-displays-after-the-user-enters-a-device-name-and-clicks-the-generate-button-in-devicenamescreen-tsx-show-two-sequential-messages-during-this-loading-period-optimising-your-device-and-generating-sensitivity-for-your-device-after-the-5-second-delay-completes-display-the-sensitivity-popup-with-the-generated-values",
+      "title": "Add a 5-second loading state that displays after the user enters a device name and clicks the Generate button in DeviceNameScreen.tsx. Show two sequential messages during this loading period: 'optimising your device' and 'generating sensitivity for your device'. After the 5-second delay completes, display the sensitivity popup with the generated values.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -175,6 +191,20 @@
       "id": "AR-11",
       "summary": "Change ENZOxSENSI text color to white",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Change input box color to white",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Add 5-second loading state with 'optimising your device' and 'generating sensitivity for your device' messages after device name entry",
+      "reqIds": [
+        "AR-2"
+      ],
       "status": "pending"
     }
   ],
